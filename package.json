@@ -15,8 +15,10 @@
   },
   "scripts": {
     "make-font": "node ./svgsToFont.js",
+    "extract-svgs": "node ./fontToSvgs.js"
   },
   "dependencies": {
+    "font-blast": "^0.7.0",
     "webfonts-generator": "^0.4.0"
   },
   "devDependencies": {}
