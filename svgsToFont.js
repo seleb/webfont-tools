@@ -23,8 +23,8 @@ async function run() {
 			dest: 'out/font',
 			html: true,
 			types: ['ttf', 'svg', 'woff', 'eot'],
-			cssTemplate: './template.css.hbs',
-			htmlTemplate: './template.html.hbs',
+			cssTemplate: path.resolve(__dirname, './template.css.hbs'),
+			htmlTemplate: path.resolve(__dirname, './template.html.hbs'),
 		}, function (error) {
 			if (error) {
 				return reject(error);
