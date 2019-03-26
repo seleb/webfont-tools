@@ -1,0 +1,21 @@
+{
+  "name": "webfont-tools",
+  "version": "0.0.1",
+  "description": "some simple tools for dealing with webfonts",
+  "keywords": [
+    "font",
+    "webfont",
+    "svg"
+  ],
+  "author": "Sean S. LeBlanc <sean.s.leblanc@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:seleb/webfont-tools.git"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {}
+}
