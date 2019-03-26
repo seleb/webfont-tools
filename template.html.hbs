@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{fontName}}</title>
+	<style>
+		html, body {
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			font-family: 'Courier New', Courier, monospace;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+		}
+
+		h1 {
+			flex: none;
+		}
+
+		ul {
+			list-style: none;
+			flex: auto;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			height: 100%;
+		}
+
+		li {
+			padding: 0.1em;
+		}
+
+		.dark {
+			background: black;
+			color: white;
+		}
+
+		{{{styles}}}
+	</style>
+</head>
+<body>
+	<h1>{{fontName}}</h1>
+	<ul>
+	{{#each names}}
+	<li>
+		<i class="{{../classPrefix}}{{this}}"></i>
+		<span>{{this}}</span>
+	</li>
+	{{/each}}
+	{{#each names}}
+	<li class="dark">
+		<i class="{{../classPrefix}}{{this}}"></i>
+		<span>{{this}}</span>
+	</li>
+	{{/each}}
+	</ul>
+</body>
+</html>
