@@ -6,6 +6,7 @@ const pkg = require('./package.json');
 const conf = require('rc')(pkg.name, {
 	in: './in/svgs',
 	out: './out/font',
+	fontName: 'iconfont',
 });
 
 async function getFileList(dir) {
@@ -24,7 +25,7 @@ async function run() {
 	const files = await getFileList(conf.in);
 	return new Promise((resolve, reject) => {
 		webfontsGenerator({
-			fontName: 'iconfont',
+			fontName: conf.fontName,
 			files,
 			dest: conf.out,
 			html: true,
