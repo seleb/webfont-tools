@@ -14,8 +14,10 @@
     "url": "git@github.com:seleb/webfont-tools.git"
   },
   "scripts": {
+    "make-font": "node ./svgsToFont.js",
   },
   "dependencies": {
+    "webfonts-generator": "^0.4.0"
   },
   "devDependencies": {}
 }
