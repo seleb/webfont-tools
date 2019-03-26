@@ -1,6 +1,12 @@
 const webfontsGenerator = require('webfonts-generator');
 const path = require('path');
 const fs = require('fs');
+const pkg = require('./package.json');
+
+const conf = require('rc')(pkg.name, {
+	in: './in/svgs',
+	out: './out/font',
+});
 
 async function getFileList(dir) {
 	const files = await new Promise((resolve, reject) => {
@@ -15,12 +21,12 @@ async function getFileList(dir) {
 }
 
 async function run() {
-	const files = await getFileList('./in/svgs');
+	const files = await getFileList(conf.in);
 	return new Promise((resolve, reject) => {
 		webfontsGenerator({
 			fontName: 'iconfont',
 			files,
-			dest: 'out/font',
+			dest: conf.out,
 			html: true,
 			types: ['ttf', 'svg', 'woff', 'eot'],
 			cssTemplate: path.resolve(__dirname, './template.css.hbs'),

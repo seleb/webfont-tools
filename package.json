@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "font-blast": "^0.7.0",
+    "rc": "^1.2.8",
     "webfonts-generator": "^0.4.0"
   },
   "devDependencies": {}
